@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #566787;
-  background: #f5f5f5;
+  background:#edeef1;
   font-size: 16px;
 }
 
@@ -20,7 +20,7 @@ code {
 @tailwind utilities;
 
 .myButton {
-  @apply inline-flex items-center gap-1 py-2 px-3 text-white rounded cursor-pointer text-sm transition-colors tracking-tighter;
+  @apply inline-flex items-center gap-1 py-2 px-3 text-white rounded cursor-pointer text-sm bg-[#7392b7] hover:bg-[#d8e1e9] hover:text-[#566787]  ;
 }
 
 th {
@@ -31,7 +31,7 @@ td {
 }
 
 tr:nth-child(2n) {
-  @apply bg-zinc-100;
+  @apply bg-[#d8e1e9];
 }
 tr {
   @apply hover:bg-sky-50;

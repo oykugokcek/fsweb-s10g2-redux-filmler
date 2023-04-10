@@ -65,13 +65,13 @@ const Movie = (props) => {
         <button
           onClick={() => handleClick()}
           type="button"
-          className="myButton bg-red-600 hover:bg-red-500"
+          className="inline-flex items-center gap-1 py-2 px-3 text-white rounded cursor-pointer text-sm   bg-red-600 hover:bg-red-500"
         >
           Sil
         </button>
         <button
           onClick={() => handleClickFav()}
-          className="myButton bg-blue-600 hover:bg-blue-500 "
+          className="myButton"
         >
           Favorilere ekle
         </button>

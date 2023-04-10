@@ -9,10 +9,10 @@ const MovieList = (props) => {
 
   return (
     <div className="flex-1">
-      <div className="overflow-hidden bg-white rounded-md shadow mb-4 sm:min-h-[400px]">
-        <table className="table-auto border-collapse text-left w-full">
-          <thead>
-            <tr className="border-zinc-200 border-b">
+      <div className="overflow-hidden bg-white rounded-md shadow mb-4 ">
+        <table className="table-auto border-collapse text-left w-full ">
+          <thead >
+            <tr className="border-zinc-200 border-b bg-[#759eb8] text-white hover:bg-[#759eb8]">
               <th className="pl-4">İsim</th>
               <th>Yönetmen</th>
               <th>Tür</th>
@@ -21,7 +21,7 @@ const MovieList = (props) => {
             </tr>
           </thead>
 
-          <tbody className="text-sm">
+          <tbody className="text-sm bg-[#edeef1]">
             {movies.map((movie) => (
               <MovieListItem key={movie.id} movie={movie} />
             ))}
