@@ -1,4 +1,4 @@
-import { ADD_FAVORITE, TOGGLE_FAVORITES } from "../actions/favoritesActions";
+import { ADD_FAVORITE, TOGGLE_FAVORITES, REMOVE_FAVORITE } from "../actions/favoritesActions";
 
 const initialState = {
   favorites: [],
@@ -16,11 +16,19 @@ const favoritesReducer = (state = initialState, action) => {
     case ADD_FAVORITE:
       let favMovie = action.payload;
       console.log(favMovie);
-
+      if(!state.favorites.includes(favMovie))
+      {
+        state.favorites= [...state.favorites, favMovie]
+      }
       return {
         ...state,
-        favorites: favMovie,
+        favorites: [...state.favorites]
       };
+      case REMOVE_FAVORITE:
+        return {
+          ...state,
+          favorites: state.favorites.filter((item) => action.payload !== item.id),
+        };
     default:
       return state;
   }

@@ -20,12 +20,12 @@ const MovieHeader = (props) => {
     <div className="flex justify-between items-center shadow rounded-md bg-white p-2 pl-3 my-3">
       <h2 className="text-zinc-600">{appTitle}</h2>
       <div className="flex items-center gap-2">
-        <button
+        {/* <button
           onClick={() => handleClick()}
           className="myButton bg-blue-600 hover:bg-blue-500"
-        >
-          <span>Favorileri {displayFavorites ? "gizle" : "göster"}</span>
-        </button>
+        > */}
+          <span onClick={() => dispatch(toggleFavorites())}>Favorileri {displayFavorites ? "gizle" : "göster"}</span>
+        {/* </button> */}
         <Link to="/movies" className="myButton bg-blue-600 hover:bg-blue-500">
           Tüm filmler
         </Link>
